@@ -1,0 +1,19 @@
+<div class="table-responsive">
+  <table id="user-short-urls-table" class="table table-borderless">
+    <thead>
+      <tr>
+        <th scope="col">Original URL</th>
+        <th scope="col">Short URL</th>
+        <th scope="col">Visits count</th>
+        <th scope="col">Expiring in</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% if @user_url_pairs %>
+          <%= render partial: 'main/url_pair', collection: @user_url_pairs %>
+        <% else %>
+          <%= render partial: 'main/url_pair', object: @url_pair %>
+        <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,5 @@
+if ($("#user-short-urls-table").length) {
+    $("#user-short-urls-table tbody").prepend("<%= j (render partial: 'main/url_pair', object: @url_pair) %>");
+} else {
+    $("#user-short-urls-table-container").html("<%= j (render 'main/table') %>");
+}

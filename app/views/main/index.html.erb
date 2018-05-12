@@ -1,0 +1,15 @@
+<div class="row align-items-center h-100">
+    <div class="col">
+        <h1 class="display-1 text-center">Basic URL Shortener</h1>
+        <div hidden>Hello, stranger! There's nothing to look at, go away!</div>
+        <div id="url-shortener-form-container">
+            <%= render 'main/form' %>
+        </div>
+        
+        <div id="user-short-urls-table-container">
+            <% if @user_url_pairs %>
+                <%= render 'main/table' %>
+            <% end %>
+        </div>
+    </div>
+</div>

@@ -14,6 +14,7 @@ gem 'redis', '~> 3.3', '>= 3.3.5'
 
 #style
 gem 'bootstrap', '~> 4.1.1'
+gem "bootstrap_form", git: "https://github.com/bootstrap-ruby/bootstrap_form.git", branch: "master"
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails'
 gem 'jquery-ui-rails'
@@ -26,6 +27,7 @@ gem 'rest-client', '~> 2.1.0.rc1'
 gem 'yajl-ruby', require: 'yajl'
 
 #JOBS
+gem 'sidekiq-scheduler'
 gem 'sidekiq'
 
 #OTHER

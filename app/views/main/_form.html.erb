@@ -1,0 +1,10 @@
+<%= bootstrap_form_for(@url_pair, url: main_index_path, remote: true) do |f| %>
+    <div class="form-row">
+        <%= f.text_field :original, wrapper: { class: "col-md-3" }, label: "Original URL", placeholder: "https://example.com/", required: true %>
+        <%= f.text_field :shortened, wrapper: { class: "col-md-7" }, prepend: "#{ENV['ROOT_URL']}", label: "Shortened URL", value: (@url_pair.shortened ? @url_pair.shortened : UrlPair.generate_random_shortened_path) %>
+        <div class="form-group col-md-2">
+            <label> </label>
+            <%= f.submit "Create link", class: "btn btn-primary btn-block" %>
+        </div>
+    </div>
+<% end %>
