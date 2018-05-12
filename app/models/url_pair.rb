@@ -6,7 +6,7 @@ class UrlPair < ApplicationRecord
     validate :check_valid_url
     
     before_create :set_user_token
-    befire_create :escape_shortened_url
+    before_create :escape_shortened_url
     
     default_scope { order(created_at: :desc) }
     
