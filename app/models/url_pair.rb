@@ -6,6 +6,7 @@ class UrlPair < ApplicationRecord
     validate :check_valid_url
     
     before_create :set_user_token
+    befire_create :escape_shortened_url
     
     default_scope { order(created_at: :desc) }
     
@@ -33,6 +34,10 @@ class UrlPair < ApplicationRecord
         
         def set_user_token
             self.user_token = UrlPair.generate_user_token if self.user_token.blank?
+        end
+        
+        def escape_shortened_url
+            self.shortened = CGI::escape(self.shortened)
         end
         
 end
