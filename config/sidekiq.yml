@@ -1,4 +1,4 @@
 :schedule:
   clean_expired_url_pairs:
-    cron: '0 * * * * *'   # Runs once per day
+    cron: '0 0 0 * * *'   # Runs once per day
     class: CleanExpiredUrlPairsWorker
